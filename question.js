@@ -1,8 +1,8 @@
 const body = document.querySelector("body");
+const container = document.querySelector(".container");
 const nav = document.querySelector(".nav");
 const questionsConatiner = document.querySelector(".questions");
 const questiontTrack = document.querySelector(".questions_track");
-// console.log(questiontTrack);
 const markingSchemeQuestionMark = document.querySelector(".question_mark");
 const markingSchemeBox = document.querySelector(".box_marking_scheme");
 let score = 0;
@@ -314,18 +314,11 @@ const clickEventCallBack = function (op) {
       questionTrackNumber.style.color = "#fff";
       totalQuestionsClicked++;
       if (totalQuestionsClicked === 10) {
-        body.innerHTML = "";
-        body.insertAdjacentHTML(
+        container.innerHTML = "";
+        container.insertAdjacentHTML(
           "afterbegin",
           `
-          <div class="score" style="
-          .score {
-            
-          }
-          
-          .score-text {
-            
-          }
+          <div class="score"
           ">
           <p class="score-text">
             <span class="correct-score">${score}</span><span class="total-score">/10</span>
