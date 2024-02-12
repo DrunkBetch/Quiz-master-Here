@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="question_style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="question.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box_marking_scheme">
+        <p>Correct Answer : <span class="correct">+1</span></p>
+        <p>Incorrect Answer : <span class="incorrect">0</span></p>
+      </div>
+      <div class="nav">
+        <div class="logo_container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="64"
+            height="64"
+            xml:space="preserve"
+            version="1.1"
+            viewBox="0 0 64 64"
+          >
+            <image
+              width="64"
+              height="64"
+              xlink:href="data:image/png;base64,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"
+            />
+          </svg>
+
+          <p>Quizzy</p>
+        </div>
+
+        <h3>
+          Marking Scheme
+          <div class="question_mark">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="#000000"
+              viewBox="0 0 256 256"
+              class="marking_scheme"
+            >
+              <path
+                d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"
+              ></path>
+            </svg>
+          </div>
+        </h3>
+      </div>
+      <h1>Quiz</h1>
+      <figure class="questions_track">
+        <h3>Questions</h3>
+        <p data-no="1">1</p>
+        <p data-no="2">2</p>
+        <p data-no="3">3</p>
+        <p data-no="4">4</p>
+        <p data-no="5">5</p>
+        <p data-no="6">6</p>
+        <p data-no="7">7</p>
+        <p data-no="8">8</p>
+        <p data-no="9">9</p>
+        <p data-no="10">10</p>
+      </figure>
+
+      <div class="questions">
+        <!-- <figure class="question" data-clicked="false" data-correct="a">
+          <h3 class="question_text">Q1. What is HTML?</h3>
+          <ul class="options_list">
+            <li class="option" data-option="a">Hyper Text Markup Language</li>
+            <li class="option" data-option="b">Hyper Text Markup Language</li>
+            <li class="option" data-option="c">Hyper Text Markup Language</li>
+            <li class="option" data-option="d">Hyper Text Markup Language</li>
+          </ul>
+        </figure> -->
+      </div>
+    </div>
+  </body>
+</html>

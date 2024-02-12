@@ -1,0 +1,142 @@
+:root {
+  --textColor: #3a5a40;
+  --backgroundColor: #a3b18a60;
+  --cardColor: #ebf3e8;
+}
+
+body {
+  font-family: "Inter";
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+  margin: 0 0;
+  margin: 30px 60px;
+}
+
+.logo_container {
+  display: flex;
+  gap: 20px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+.links {
+  display: flex;
+  gap: 30px;
+}
+h1 {
+  font-size: 64px;
+}
+.nav h3 {
+  font-size: 24px;
+  position: relative;
+}
+.box_marking_scheme {
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 85px;
+  right: 65px;
+  opacity: 0;
+  color: #111111;
+}
+
+.box_marking_scheme .correct {
+  color: #03c03c;
+}
+.box_marking_scheme .incorrect {
+  color: #ff0800;
+}
+.question_mark {
+  display: inline-block;
+}
+/* .trackNquestionsContainer {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+} */
+.questions_track p {
+  display: inline-block;
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+.questions_track {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  column-gap: 10px;
+  width: 150px;
+  padding: 20px;
+  position: fixed;
+  border: 2px solid rgba(0, 0, 0, 0.188);
+  border-radius: 10px;
+}
+.questions_track h3 {
+  font-size: 20px;
+  grid-column: 1/-1;
+  text-align: center;
+}
+.questions {
+  position: relative;
+}
+.question {
+  background-color: #fff;
+  width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+.question h3 {
+  font-size: 30px;
+}
+.options_list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.option {
+  font-size: 18px;
+  list-style: none;
+  display: inline-block;
+  padding: 10px 10px;
+  border: 2px solid rgba(0, 0, 0, 0.188);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.nav.sticky {
+  position: fixed;
+  background-color: #fff;
+}
+/* Score */
+.score {
+  margin: auto;
+  margin-top: 10%;
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+  border-radius: 500px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.score-text {
+  display: inline-block;
+  margin-left: 96px;
+  margin-top: 134px;
+  font-size: 100px;
+}
+.s {
+  margin: auto;
+}
