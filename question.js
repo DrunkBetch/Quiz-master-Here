@@ -318,8 +318,7 @@ const clickEventCallBack = function (op) {
         container.insertAdjacentHTML(
           "afterbegin",
           `
-          <div class="score"
-          ">
+          <div class="score">
           <p class="score-text">
             <span class="correct-score">${score}</span><span class="total-score">/10</span>
           </p>
