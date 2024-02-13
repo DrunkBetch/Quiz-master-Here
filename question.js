@@ -77,7 +77,7 @@ const questionsArray = [
     questionText:
       "What is the correct syntax for declaring a variable in JavaScript?",
     options: ["var varName = value", "String", "Boolean", "Objects"],
-    correct: "d",
+    correct: "a",
   },
 
   {
@@ -90,17 +90,7 @@ const questionsArray = [
     ],
     correct: "a",
   },
-  {
-    questionText:
-      "What is the correct syntax for declaring a variable in JavaScript?",
-    options: [
-      "var varName = value",
-      "let varName = value",
-      " const varName = value",
-      "All of the above",
-    ],
-    correct: "d",
-  },
+
   {
     questionText: "Which keyword is used to create a function in JavaScript?",
     options: ["var", "let", "const", "function"],
@@ -225,7 +215,7 @@ function randomQuestionsArray(allQuestions) {
   const arrQuestions = [];
 
   for (let i = 0; i < 10; i++) {
-    const randomNum = Math.trunc(Math.random() * 24);
+    const randomNum = Math.trunc(Math.random() * questionsArray.length);
     arrQuestions.push(allQuestions[randomNum]);
   }
   return arrQuestions;
