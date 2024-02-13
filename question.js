@@ -221,7 +221,6 @@ const questionsArray = [
     correct: "a",
   },
 ];
-console.log(questionsArray.length);
 function randomQuestionsArray(allQuestions) {
   const arrQuestions = [];
 
@@ -292,10 +291,7 @@ const clickEventCallBack = function (op) {
       score++;
       totalQuestionsClicked++;
       if (totalQuestionsClicked === 10) {
-        console.log("YES");
         body.innerHTML = "";
-      } else {
-        console.log("NO");
       }
     } else if (
       target.dataset.option !== targetQuestion.dataset.correct &&
@@ -313,18 +309,18 @@ const clickEventCallBack = function (op) {
       questionTrackNumber.style.backgroundColor = "#ff0800";
       questionTrackNumber.style.color = "#fff";
       totalQuestionsClicked++;
-      if (totalQuestionsClicked === 10) {
-        container.innerHTML = "";
-        container.insertAdjacentHTML(
-          "afterbegin",
-          `
-          <div class="score">
-          <p class="score-text">
-            <span class="correct-score">${score}</span><span class="total-score">/10</span>
-          </p>
-        </div>`
-        );
-      }
+    }
+    if (totalQuestionsClicked === 10) {
+      container.innerHTML = "";
+      container.insertAdjacentHTML(
+        "afterbegin",
+        `
+        <div class="score">
+        <p class="score-text">
+          <span class="correct-score">${score}</span><span class="total-score">/10</span>
+        </p>
+      </div>`
+      );
     }
 
     op.removeEventListener("mouseover", mousenterEvent);
