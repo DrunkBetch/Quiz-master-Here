@@ -290,9 +290,6 @@ const clickEventCallBack = function (op) {
       questionTrackNumber.style.color = "#fff";
       score++;
       totalQuestionsClicked++;
-      if (totalQuestionsClicked === 10) {
-        body.innerHTML = "";
-      }
     } else if (
       target.dataset.option !== targetQuestion.dataset.correct &&
       targetQuestion.dataset.clicked === "false"
