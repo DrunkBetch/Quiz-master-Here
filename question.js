@@ -8,7 +8,7 @@ const markingSchemeBox = document.querySelector(".box_marking_scheme");
 let score = 0;
 let totalQuestionsClicked = 0;
 // Options Hovering
-function optionHover(bgColor) {
+function optionHover(bgColor) { 
   return function (e) {
     e.target.closest(".option").style.backgroundColor = `${bgColor}`;
   };

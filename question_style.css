@@ -79,7 +79,7 @@ h1 {
   padding: 20px;
   position: fixed;
   border: 2px solid rgba(0, 0, 0, 0.188);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .questions_track h3 {
   font-size: 20px;
